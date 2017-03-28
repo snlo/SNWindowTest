@@ -26,6 +26,11 @@
 		B32907711E890C360055B3AA /* ZYTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B329076A1E890C360055B3AA /* ZYTestTableViewController.m */; };
 		B32907741E890D2C0055B3AA /* JsutDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B32907731E890D2C0055B3AA /* JsutDoViewController.m */; };
 		B32907781E8910760055B3AA /* JsutDoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B32907771E8910760055B3AA /* JsutDoViewController.xib */; };
+		B3C142C51E8A482D00B7E3BE /* NSObject+SNTopLayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C142C41E8A482D00B7E3BE /* NSObject+SNTopLayerWindow.m */; };
+		B3C142C81E8A512800B7E3BE /* SNTopLayerWindowContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C142C71E8A512800B7E3BE /* SNTopLayerWindowContainer.m */; };
+		B3C142CB1E8A515B00B7E3BE /* SNTopLayerWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C142CA1E8A515B00B7E3BE /* SNTopLayerWindowViewController.m */; };
+		B3C142D11E8A525D00B7E3BE /* SNTopLayerWindowDraggableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C142D01E8A525D00B7E3BE /* SNTopLayerWindowDraggableButton.m */; };
+		B3C142D41E8A536000B7E3BE /* SNTopLayerWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C142D31E8A536000B7E3BE /* SNTopLayerWindowView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +88,16 @@
 		B32907721E890D2C0055B3AA /* JsutDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsutDoViewController.h; sourceTree = "<group>"; };
 		B32907731E890D2C0055B3AA /* JsutDoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsutDoViewController.m; sourceTree = "<group>"; };
 		B32907771E8910760055B3AA /* JsutDoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JsutDoViewController.xib; sourceTree = "<group>"; };
+		B3C142C31E8A482D00B7E3BE /* NSObject+SNTopLayerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SNTopLayerWindow.h"; sourceTree = "<group>"; };
+		B3C142C41E8A482D00B7E3BE /* NSObject+SNTopLayerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SNTopLayerWindow.m"; sourceTree = "<group>"; };
+		B3C142C61E8A512800B7E3BE /* SNTopLayerWindowContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNTopLayerWindowContainer.h; sourceTree = "<group>"; };
+		B3C142C71E8A512800B7E3BE /* SNTopLayerWindowContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNTopLayerWindowContainer.m; sourceTree = "<group>"; };
+		B3C142C91E8A515B00B7E3BE /* SNTopLayerWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNTopLayerWindowViewController.h; sourceTree = "<group>"; };
+		B3C142CA1E8A515B00B7E3BE /* SNTopLayerWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNTopLayerWindowViewController.m; sourceTree = "<group>"; };
+		B3C142CF1E8A525D00B7E3BE /* SNTopLayerWindowDraggableButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNTopLayerWindowDraggableButton.h; sourceTree = "<group>"; };
+		B3C142D01E8A525D00B7E3BE /* SNTopLayerWindowDraggableButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNTopLayerWindowDraggableButton.m; sourceTree = "<group>"; };
+		B3C142D21E8A536000B7E3BE /* SNTopLayerWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNTopLayerWindowView.h; sourceTree = "<group>"; };
+		B3C142D31E8A536000B7E3BE /* SNTopLayerWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNTopLayerWindowView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +159,7 @@
 				B32907721E890D2C0055B3AA /* JsutDoViewController.h */,
 				B32907731E890D2C0055B3AA /* JsutDoViewController.m */,
 				B32907771E8910760055B3AA /* JsutDoViewController.xib */,
+				B3C142C21E8A480E00B7E3BE /* SNTopLayerWindow */,
 				B329075A1E890C360055B3AA /* ZYLoginManager */,
 				B329075F1E890C360055B3AA /* ZYSuspensionView */,
 				B32907661E890C360055B3AA /* ZYTestManager */,
@@ -215,6 +231,23 @@
 				B329076A1E890C360055B3AA /* ZYTestTableViewController.m */,
 			);
 			path = ZYTestManager;
+			sourceTree = "<group>";
+		};
+		B3C142C21E8A480E00B7E3BE /* SNTopLayerWindow */ = {
+			isa = PBXGroup;
+			children = (
+				B3C142C31E8A482D00B7E3BE /* NSObject+SNTopLayerWindow.h */,
+				B3C142C41E8A482D00B7E3BE /* NSObject+SNTopLayerWindow.m */,
+				B3C142C61E8A512800B7E3BE /* SNTopLayerWindowContainer.h */,
+				B3C142C71E8A512800B7E3BE /* SNTopLayerWindowContainer.m */,
+				B3C142C91E8A515B00B7E3BE /* SNTopLayerWindowViewController.h */,
+				B3C142CA1E8A515B00B7E3BE /* SNTopLayerWindowViewController.m */,
+				B3C142D21E8A536000B7E3BE /* SNTopLayerWindowView.h */,
+				B3C142D31E8A536000B7E3BE /* SNTopLayerWindowView.m */,
+				B3C142CF1E8A525D00B7E3BE /* SNTopLayerWindowDraggableButton.h */,
+				B3C142D01E8A525D00B7E3BE /* SNTopLayerWindowDraggableButton.m */,
+			);
+			path = SNTopLayerWindow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,14 +386,19 @@
 			files = (
 				B32907261E88F6B60055B3AA /* ViewController.m in Sources */,
 				B329076C1E890C360055B3AA /* ZYLoginTableViewController.m in Sources */,
+				B3C142C51E8A482D00B7E3BE /* NSObject+SNTopLayerWindow.m in Sources */,
 				B32907231E88F6B60055B3AA /* AppDelegate.m in Sources */,
 				B32907701E890C360055B3AA /* ZYTestManager.m in Sources */,
 				B329076E1E890C360055B3AA /* ZYSuspensionManager.m in Sources */,
+				B3C142CB1E8A515B00B7E3BE /* SNTopLayerWindowViewController.m in Sources */,
+				B3C142D41E8A536000B7E3BE /* SNTopLayerWindowView.m in Sources */,
+				B3C142D11E8A525D00B7E3BE /* SNTopLayerWindowDraggableButton.m in Sources */,
 				B329076B1E890C360055B3AA /* ZYLoginManager.m in Sources */,
 				B32907741E890D2C0055B3AA /* JsutDoViewController.m in Sources */,
 				B32907591E88F9340055B3AA /* TestPresentViewController.m in Sources */,
 				B32907561E88F91A0055B3AA /* TestPushViewController.m in Sources */,
 				B32907711E890C360055B3AA /* ZYTestTableViewController.m in Sources */,
+				B3C142C81E8A512800B7E3BE /* SNTopLayerWindowContainer.m in Sources */,
 				B329076D1E890C360055B3AA /* NSObject+ZYSuspensionView.m in Sources */,
 				B329076F1E890C360055B3AA /* ZYSuspensionView.m in Sources */,
 				B32907201E88F6B60055B3AA /* main.m in Sources */,

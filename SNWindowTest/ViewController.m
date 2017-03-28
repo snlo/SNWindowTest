@@ -12,6 +12,8 @@
 
 #import "JsutDoViewController.h"
 
+
+#import "NSObject+SNTopLayerWindow.h"
 @interface ViewController () <ZYSuspensionViewDelegate>
 
 @property (nonatomic, weak) ZYSuspensionView *susView;
@@ -60,7 +62,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     [self creatNewWindow];
-    
+    NSLog(@"sn_md5Key - - %@",self.sn_md5Key);
     NSLog(@"%s",__func__);
 }
 

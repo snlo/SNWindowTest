@@ -19,7 +19,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.windowLevel = 1000000;
+        self.windowLevel = CGFLOAT_MAX;
     }
     return self;
 }
