@@ -81,12 +81,28 @@
                                     <segue destination="BYZ-38-t0r" kind="showDetail" id="4zU-Pw-MbK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5b-5R-c8b">
+                                <rect key="frame" x="16" y="410.5" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="giZ-oy-dar"/>
+                                </constraints>
+                                <state key="normal" title="clear all windows">
+                                    <color key="titleColor" red="0.99199999999999999" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleClearAllButton:" destination="fO3-yP-hUF" eventType="touchUpInside" id="whS-I2-jga"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FNT-wF-ybq" firstAttribute="top" secondItem="XSh-f5-Xg3" secondAttribute="bottom" constant="16" id="5GR-mR-e0G"/>
+                            <constraint firstAttribute="trailing" secondItem="a5b-5R-c8b" secondAttribute="trailing" constant="16" id="DuO-eB-mTe"/>
+                            <constraint firstItem="a5b-5R-c8b" firstAttribute="leading" secondItem="BPj-om-KlF" secondAttribute="leading" constant="16" id="Dum-NV-fMi"/>
                             <constraint firstAttribute="trailing" secondItem="XSh-f5-Xg3" secondAttribute="trailing" constant="16" id="hHl-la-JoE"/>
                             <constraint firstItem="XSh-f5-Xg3" firstAttribute="leading" secondItem="BPj-om-KlF" secondAttribute="leading" constant="16" id="iw8-0X-0YT"/>
+                            <constraint firstItem="a5b-5R-c8b" firstAttribute="top" secondItem="FNT-wF-ybq" secondAttribute="bottom" constant="16" id="la9-xk-67E"/>
                             <constraint firstItem="XSh-f5-Xg3" firstAttribute="centerY" secondItem="BPj-om-KlF" secondAttribute="centerY" id="qMz-Rr-ZNy"/>
                             <constraint firstAttribute="trailing" secondItem="FNT-wF-ybq" secondAttribute="trailing" constant="16" id="qfj-h3-1zE"/>
                             <constraint firstItem="FNT-wF-ybq" firstAttribute="leading" secondItem="BPj-om-KlF" secondAttribute="leading" constant="16" id="vvD-Vp-y8z"/>

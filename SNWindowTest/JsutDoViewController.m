@@ -14,6 +14,9 @@
 
 @implementation JsutDoViewController
 
+- (void)dealloc {
+    NSLog(@"%s",__func__);
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

@@ -6,8 +6,10 @@
 //  Copyright © 2017年 snlo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SNTopLayerWindowView.h"
 
-@interface SNTopLayerWindowDraggableButton : UIButton
+@interface SNTopLayerWindowDraggableButton : SNTopLayerWindowView
+
++ (instancetype)draggableButtonFrame:(CGRect)frame clickBlock:(void(^)(void))clickBlock;
 
 @end

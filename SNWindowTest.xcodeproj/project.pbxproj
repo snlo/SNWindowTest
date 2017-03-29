@@ -385,8 +385,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B32907261E88F6B60055B3AA /* ViewController.m in Sources */,
-				B329076C1E890C360055B3AA /* ZYLoginTableViewController.m in Sources */,
 				B3C142C51E8A482D00B7E3BE /* NSObject+SNTopLayerWindow.m in Sources */,
+				B329076C1E890C360055B3AA /* ZYLoginTableViewController.m in Sources */,
 				B32907231E88F6B60055B3AA /* AppDelegate.m in Sources */,
 				B32907701E890C360055B3AA /* ZYTestManager.m in Sources */,
 				B329076E1E890C360055B3AA /* ZYSuspensionManager.m in Sources */,

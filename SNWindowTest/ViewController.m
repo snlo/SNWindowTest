@@ -13,10 +13,13 @@
 #import "JsutDoViewController.h"
 
 
-#import "NSObject+SNTopLayerWindow.h"
+#import "SNTopLayerWindowDraggableButton.h"
+
 @interface ViewController () <ZYSuspensionViewDelegate>
 
 @property (nonatomic, weak) ZYSuspensionView *susView;
+
+@property (nonatomic ,strong) SNTopLayerWindowDraggableButton * viewDraggableButton;
 
 @end
 
@@ -37,6 +40,7 @@
     [susView setTitle:@"JSUT" forState:UIControlStateNormal];
     [susView show];
     self.susView = susView;
+ 
     
 }
 
@@ -61,9 +65,18 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    [self creatNewWindow];
-    NSLog(@"sn_md5Key - - %@",self.sn_md5Key);
-    NSLog(@"%s",__func__);
+//    [self creatNewWindow];
+//    NSLog(@"sn_x - - %@",self.sn_md5Key);
+//    NSLog(@"%s",__func__);
+    
+    self.viewDraggableButton = [SNTopLayerWindowDraggableButton draggableButtonFrame:CGRectMake(0, 64, 50, 50) clickBlock:^{
+        
+    }];
+    
+    [self.viewDraggableButton show];
+}
+- (IBAction)handleClearAllButton:(UIButton *)sender {
+    [self.viewDraggableButton dismiss];
 }
 
 #pragma mark - ZYSuspensionViewDelegate

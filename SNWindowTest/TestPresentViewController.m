@@ -24,7 +24,6 @@
     NSLog(@"%s",__func__);
     
     [self.susView removeFromScreen];
-    
 }
 
 - (void)viewDidLoad {
