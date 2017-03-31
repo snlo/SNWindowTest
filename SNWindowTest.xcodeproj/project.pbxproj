@@ -26,6 +26,7 @@
 		B32907711E890C360055B3AA /* ZYTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B329076A1E890C360055B3AA /* ZYTestTableViewController.m */; };
 		B32907741E890D2C0055B3AA /* JsutDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B32907731E890D2C0055B3AA /* JsutDoViewController.m */; };
 		B32907781E8910760055B3AA /* JsutDoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B32907771E8910760055B3AA /* JsutDoViewController.xib */; };
+		B39C44881E8E5FF500FCCBA4 /* TestSNTopLayerWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B39C44871E8E5FF500FCCBA4 /* TestSNTopLayerWindowView.m */; };
 		B3C142C51E8A482D00B7E3BE /* NSObject+SNTopLayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C142C41E8A482D00B7E3BE /* NSObject+SNTopLayerWindow.m */; };
 		B3C142C81E8A512800B7E3BE /* SNTopLayerWindowContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C142C71E8A512800B7E3BE /* SNTopLayerWindowContainer.m */; };
 		B3C142CB1E8A515B00B7E3BE /* SNTopLayerWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C142CA1E8A515B00B7E3BE /* SNTopLayerWindowViewController.m */; };
@@ -88,6 +89,8 @@
 		B32907721E890D2C0055B3AA /* JsutDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsutDoViewController.h; sourceTree = "<group>"; };
 		B32907731E890D2C0055B3AA /* JsutDoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsutDoViewController.m; sourceTree = "<group>"; };
 		B32907771E8910760055B3AA /* JsutDoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JsutDoViewController.xib; sourceTree = "<group>"; };
+		B39C44861E8E5FF500FCCBA4 /* TestSNTopLayerWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSNTopLayerWindowView.h; sourceTree = "<group>"; };
+		B39C44871E8E5FF500FCCBA4 /* TestSNTopLayerWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSNTopLayerWindowView.m; sourceTree = "<group>"; };
 		B3C142C31E8A482D00B7E3BE /* NSObject+SNTopLayerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SNTopLayerWindow.h"; sourceTree = "<group>"; };
 		B3C142C41E8A482D00B7E3BE /* NSObject+SNTopLayerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SNTopLayerWindow.m"; sourceTree = "<group>"; };
 		B3C142C61E8A512800B7E3BE /* SNTopLayerWindowContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNTopLayerWindowContainer.h; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 				B3C142D31E8A536000B7E3BE /* SNTopLayerWindowView.m */,
 				B3C142CF1E8A525D00B7E3BE /* SNTopLayerWindowDraggableButton.h */,
 				B3C142D01E8A525D00B7E3BE /* SNTopLayerWindowDraggableButton.m */,
+				B39C44861E8E5FF500FCCBA4 /* TestSNTopLayerWindowView.h */,
+				B39C44871E8E5FF500FCCBA4 /* TestSNTopLayerWindowView.m */,
 			);
 			path = SNTopLayerWindow;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 				TargetAttributes = {
 					B329071A1E88F6B60055B3AA = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2M6DKZ5NTG;
 						ProvisioningStyle = Automatic;
 					};
 					B32907331E88F6B60055B3AA = {
@@ -398,6 +404,7 @@
 				B32907591E88F9340055B3AA /* TestPresentViewController.m in Sources */,
 				B32907561E88F91A0055B3AA /* TestPushViewController.m in Sources */,
 				B32907711E890C360055B3AA /* ZYTestTableViewController.m in Sources */,
+				B39C44881E8E5FF500FCCBA4 /* TestSNTopLayerWindowView.m in Sources */,
 				B3C142C81E8A512800B7E3BE /* SNTopLayerWindowContainer.m in Sources */,
 				B329076D1E890C360055B3AA /* NSObject+ZYSuspensionView.m in Sources */,
 				B329076F1E890C360055B3AA /* ZYSuspensionView.m in Sources */,
@@ -496,7 +503,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -538,7 +545,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -550,10 +557,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2M6DKZ5NTG;
 				INFOPLIST_FILE = SNWindowTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = snloveydus.SNWindowTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -561,10 +572,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2M6DKZ5NTG;
 				INFOPLIST_FILE = SNWindowTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = snloveydus.SNWindowTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

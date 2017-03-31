@@ -116,7 +116,7 @@
         }else{
             targetY = panPoint.y;
         }
-        
+        NSLog(@"kLeanProportion -- %f",kLeanProportion);
         CGFloat centerXSpace = (0.5 - kLeanProportion) * ballWidth;
         CGFloat centerYSpace = (0.5 - kLeanProportion) * ballHeight;
 

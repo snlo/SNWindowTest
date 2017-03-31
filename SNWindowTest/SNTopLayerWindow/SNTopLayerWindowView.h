@@ -16,7 +16,7 @@
 
 typedef NS_ENUM(NSUInteger, SNTopLayerWindowViewLeanStyle) {
     /*无状态，也就是在屏幕范围内随意停靠*/
-    SNTopLayerWindowViewLeanStyleNormal,
+    SNTopLayerWindowViewLeanStyleNormal = 0,
     /*只能屏幕左右两侧依靠*/
     SNTopLayerWindowViewLeanStyleHorizontal,
     /*只能在屏幕上下左右边侧依靠*/
@@ -26,6 +26,20 @@ typedef NS_ENUM(NSUInteger, SNTopLayerWindowViewLeanStyle) {
 
 @interface SNTopLayerWindowView : UIView
 
+/**
+ 子类必须实现
+
+ @param frame 窗口的frame
+ @return value
+ */
+- (instancetype)initWithFrame:(CGRect)frame;
+
+/**
+ 垂直边距 <上边距、下边距>
+ 水平边距，默认为‘0’
+ */
+@property (nonatomic, assign) CGFloat verticalMargin;
+@property (nonatomic, assign) CGFloat HorizontalMargin;
 /**
  窗口依靠的，默认为‘SNTopLayerWindowViewLeanStyleNormal’
  */
@@ -45,5 +59,10 @@ typedef NS_ENUM(NSUInteger, SNTopLayerWindowViewLeanStyle) {
  让这个窗口视图离开，
  */
 - (void)dismiss;
+
+/**
+ 让所有的窗口视图离开，
+ */
++ (void)dismissAll;
 
 @end

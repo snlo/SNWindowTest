@@ -29,6 +29,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.title = @"window_test";
+    
+    
+    
 //    [[UIApplication sharedApplication] windows]
     
 //     Just create a ZYSuspensionView
@@ -40,7 +43,8 @@
     [susView setTitle:@"JSUT" forState:UIControlStateNormal];
     [susView show];
     self.susView = susView;
- 
+
+    
     
 }
 
@@ -67,7 +71,7 @@
     
 //    [self creatNewWindow];
 //    NSLog(@"sn_x - - %@",self.sn_md5Key);
-//    NSLog(@"%s",__func__);
+//    NSLog(@"%s",__func__);健康
     
     self.viewDraggableButton = [SNTopLayerWindowDraggableButton draggableButtonFrame:CGRectMake(0, 64, 50, 50) clickBlock:^{
         

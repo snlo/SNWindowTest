@@ -8,9 +8,6 @@
 
 #import "SNTopLayerWindowView.h"
 
-#define kLeanProportion (8/55.0)
-#define kVerticalMargin 15.0
-
 @interface SNTopLayerWindowView ()
 
 @property (nonatomic, assign) CGPoint initialCenter;
@@ -25,6 +22,7 @@
     if (self) {
         self.userInteractionEnabled = YES;
         self.clipsToBounds = YES;
+        self.backgroundColor = [UIColor yellowColor];
     }
     return self;
 }
@@ -33,61 +31,86 @@
 - (void)handlePanGesture:(UIPanGestureRecognizer*)sender
 {
     UIWindow *appWindow = [UIApplication sharedApplication].delegate.window;
-    CGPoint panPoint = [sender translationInView:appWindow];
+    CGPoint panMvovePoint = [sender translationInView:appWindow];
     
     if(sender.state == UIGestureRecognizerStateBegan) {
-//        self.alpha = 1;
         [self checkCurrentWindowInitialCenter];
     }else if(sender.state == UIGestureRecognizerStateChanged) {
-        
         [SNTopLayerWindowManager windowForKey:self.sn_md5Key].center =
         CGPointMake(
-                    self.initialCenter.x + panPoint.x,
-                    self.initialCenter.y + panPoint.y);
+                    self.initialCenter.x + panMvovePoint.x,
+                    self.initialCenter.y + panMvovePoint.y);
     }else if(sender.state == UIGestureRecognizerStateEnded || sender.state == UIGestureRecognizerStateCancelled) {
-//        self.alpha = .7;
-        return;
         
-        CGFloat ballWidth = self.frame.size.width;
-        CGFloat ballHeight = self.frame.size.height;
+        CGPoint panPoint = [sender locationInView:appWindow];
+        
+        CGFloat topLayerWindowWidth = self.frame.size.width;
+        CGFloat topLayerWindowHeight = self.frame.size.height;
         CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
         CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
         
-        CGFloat left = fabs(panPoint.x);
-        CGFloat right = fabs(screenWidth - left);
         CGFloat top = fabs(panPoint.y);
+        CGFloat left = fabs(panPoint.x);
         CGFloat bottom = fabs(screenHeight - top);
+        CGFloat right = fabs(screenWidth - left);
         
+
         CGFloat minSpace = 0;
-        //        if (self.leanType == ZYSuspensionViewLeanTypeHorizontal) {
-        //            minSpace = MIN(left, right);
-        //        }else{
-        //            minSpace = MIN(MIN(MIN(top, left), bottom), right);
-        //        }
-        minSpace = MIN(MIN(MIN(top, left), bottom), right);
+
+        switch (self.leanStyle) {
+            case SNTopLayerWindowViewLeanStyleNormal: {
+                
+            } break;
+            case SNTopLayerWindowViewLeanStyleHorizontal: {
+                minSpace = MIN(left, right);
+            } break;
+            case SNTopLayerWindowViewLeanStyleEachSide: {
+                minSpace = MIN(MIN(MIN(top, left), bottom), right);
+            } break;
+            default: {
+                
+            } break;
+        }
+        
         CGPoint newCenter = CGPointZero;
         CGFloat targetY = 0;
         
         //Correcting Y
-        if (panPoint.y < kVerticalMargin + ballHeight / 2.0) {
-            targetY = kVerticalMargin + ballHeight / 2.0;
-        }else if (panPoint.y > (screenHeight - ballHeight / 2.0 - kVerticalMargin)) {
-            targetY = screenHeight - ballHeight / 2.0 - kVerticalMargin;
-        }else{
-            targetY = panPoint.y;
+        if (panPoint.y < topLayerWindowHeight / 2.0) {
+            targetY = topLayerWindowHeight / 2.0;
+        } else if (panPoint.y > (screenHeight - topLayerWindowHeight / 2.0)) {
+            targetY = screenHeight - topLayerWindowHeight / 2.0;
+        } else{
+            targetY = self.initialCenter.y + panMvovePoint.y;
         }
         
-        CGFloat centerXSpace = (0.5 - kLeanProportion) * ballWidth;
-        CGFloat centerYSpace = (0.5 - kLeanProportion) * ballHeight;
+        //Correcting X
+        CGFloat targetX = 0;
+        if (panPoint.x < topLayerWindowWidth / 2.0) {
+            targetX = topLayerWindowWidth / 2.0;
+        } else if (panPoint.x > (screenWidth - topLayerWindowWidth / 2.0)) {
+            targetX = screenWidth - topLayerWindowWidth / 2.0;
+        } else {
+            targetX = self.initialCenter.x +panMvovePoint.x;
+        }
+        
+        CGFloat centerXSpace = (0.5 +(self.HorizontalMargin / topLayerWindowWidth)) * topLayerWindowWidth - 0.001;
+        CGFloat centerYSpace = (0.5 +(self.verticalMargin / topLayerWindowWidth) ) * topLayerWindowHeight - 0.001;
         
         if (minSpace == left) {
+            //左
             newCenter = CGPointMake(centerXSpace, targetY);
-        }else if (minSpace == right) {
+        } else if (minSpace == right) {
+            //右
             newCenter = CGPointMake(screenWidth - centerXSpace, targetY);
-        }else if (minSpace == top) {
+        } else if (minSpace == top) {
+            //上
             newCenter = CGPointMake(panPoint.x, centerYSpace);
-        }else {
+        } else if (minSpace == bottom){
+            //下
             newCenter = CGPointMake(panPoint.x, screenHeight - centerYSpace);
+        } else {
+            newCenter = CGPointMake(targetX, targetY);
         }
         
         [UIView animateWithDuration:.25 animations:^{
@@ -135,7 +158,10 @@
 
 - (void)dismiss
 {
+    [SNTopLayerWindowManager removeWindowForKey:self.sn_md5Key];
+}
++ (void)dismissAll
+{
     [SNTopLayerWindowManager removeAllWindow];
 }
-
 @end

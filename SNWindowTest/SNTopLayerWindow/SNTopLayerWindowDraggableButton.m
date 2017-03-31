@@ -25,8 +25,10 @@ typedef void(^ClickBlock)(void);
     self = [super initWithFrame:frame];
     if (self) {
         self.isDraggabled = YES;
-        self.clickBlock = clickBlock;
+        self.leanStyle = SNTopLayerWindowViewLeanStyleEachSide;
+        self.HorizontalMargin = 16;
         
+        self.clickBlock = clickBlock;
         [self button];
     }
     return self;
