@@ -8,16 +8,14 @@
 
 #import "ViewController.h"
 
-#import "ZYSuspensionView.h"
 
 #import "JsutDoViewController.h"
 
 
 #import "SNTopLayerWindowDraggableButton.h"
 
-@interface ViewController () <ZYSuspensionViewDelegate>
+@interface ViewController ()
 
-@property (nonatomic, weak) ZYSuspensionView *susView;
 
 @property (nonatomic ,strong) SNTopLayerWindowDraggableButton * viewDraggableButton;
 
@@ -33,49 +31,16 @@
     
     
 //    [[UIApplication sharedApplication] windows]
-    
-//     Just create a ZYSuspensionView
-    UIColor *color = [UIColor colorWithRed:0.97 green:0.30 blue:0.30 alpha:1.00];
-    ZYSuspensionView *susView = [[ZYSuspensionView alloc] initWithFrame:CGRectMake([ZYSuspensionView suggestXWithWidth:100], 200, 100, 100)
-                                                                  color:color
-                                                               delegate:self];
-    susView.leanType = ZYSuspensionViewLeanTypeEachSide;
-    [susView setTitle:@"JSUT" forState:UIControlStateNormal];
-    [susView show];
-    self.susView = susView;
-
-    
+    self.viewDraggableButton = [SNTopLayerWindowDraggableButton draggableButtonFrame:CGRectMake(10, 700, 100, 100) clickBlock:^{
+        
+    }];
     
 }
 
-- (void)creatNewWindow {
-    UIWindow * currentWindow = [UIApplication sharedApplication].keyWindow;
-    
-    //创建一个Window
-    UIWindow * testWindow = [[UIWindow alloc] initWithFrame:CGRectMake(64, 64, 64, 64)];
-    testWindow.rootViewController = self;
-    testWindow.windowLevel = 1000000;
-    [testWindow makeKeyAndVisible];
-    
-    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 64, 64)];
-    button.backgroundColor = [UIColor yellowColor];
-    
-    [testWindow addSubview:button];
-    
-    [currentWindow addSubview:testWindow];
-    
-    [currentWindow makeKeyWindow];
-}
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-//    [self creatNewWindow];
-//    NSLog(@"sn_x - - %@",self.sn_md5Key);
-//    NSLog(@"%s",__func__);健康
     
-    self.viewDraggableButton = [SNTopLayerWindowDraggableButton draggableButtonFrame:CGRectMake(0, 64, 50, 50) clickBlock:^{
-        
-    }];
     
     [self.viewDraggableButton show];
 }
@@ -83,18 +48,5 @@
     [self.viewDraggableButton dismiss];
 }
 
-#pragma mark - ZYSuspensionViewDelegate
-- (void)suspensionViewClick:(ZYSuspensionView *)suspensionView
-{
-    NSLog(@"click %@, %s",suspensionView.titleLabel.text, __func__);
-    
-    if (self.navigationController) {
-        [self.navigationController pushViewController:[[JsutDoViewController alloc] init] animated:YES];
-    } else {
-        [self presentViewController:[[JsutDoViewController alloc] init] animated:YES completion:^{
-            
-        }];
-    }
-}
 
 @end

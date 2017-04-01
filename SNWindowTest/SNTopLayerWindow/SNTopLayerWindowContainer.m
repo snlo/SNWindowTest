@@ -15,6 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.windowLevel = CGFLOAT_MAX;
+        self.layer.masksToBounds = YES;
     }
     return self;
 }

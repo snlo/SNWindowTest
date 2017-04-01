@@ -23,6 +23,9 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    
+    
     if (!self.navigationController) {
         [self dismissViewControllerAnimated:YES completion:^{
             

@@ -17,16 +17,9 @@
 		B32907441E88F6B60055B3AA /* SNWindowTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B32907431E88F6B60055B3AA /* SNWindowTestUITests.m */; };
 		B32907561E88F91A0055B3AA /* TestPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B32907551E88F91A0055B3AA /* TestPushViewController.m */; };
 		B32907591E88F9340055B3AA /* TestPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B32907581E88F9340055B3AA /* TestPresentViewController.m */; };
-		B329076B1E890C360055B3AA /* ZYLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B329075C1E890C360055B3AA /* ZYLoginManager.m */; };
-		B329076C1E890C360055B3AA /* ZYLoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B329075E1E890C360055B3AA /* ZYLoginTableViewController.m */; };
-		B329076D1E890C360055B3AA /* NSObject+ZYSuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B32907611E890C360055B3AA /* NSObject+ZYSuspensionView.m */; };
-		B329076E1E890C360055B3AA /* ZYSuspensionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B32907631E890C360055B3AA /* ZYSuspensionManager.m */; };
-		B329076F1E890C360055B3AA /* ZYSuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B32907651E890C360055B3AA /* ZYSuspensionView.m */; };
-		B32907701E890C360055B3AA /* ZYTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B32907681E890C360055B3AA /* ZYTestManager.m */; };
-		B32907711E890C360055B3AA /* ZYTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B329076A1E890C360055B3AA /* ZYTestTableViewController.m */; };
 		B32907741E890D2C0055B3AA /* JsutDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B32907731E890D2C0055B3AA /* JsutDoViewController.m */; };
 		B32907781E8910760055B3AA /* JsutDoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B32907771E8910760055B3AA /* JsutDoViewController.xib */; };
-		B39C44881E8E5FF500FCCBA4 /* TestSNTopLayerWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B39C44871E8E5FF500FCCBA4 /* TestSNTopLayerWindowView.m */; };
+		B38DB2561E8F5B9B008314A9 /* SNNavigationTopLayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B38DB2551E8F5B9B008314A9 /* SNNavigationTopLayerWindow.m */; };
 		B3C142C51E8A482D00B7E3BE /* NSObject+SNTopLayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C142C41E8A482D00B7E3BE /* NSObject+SNTopLayerWindow.m */; };
 		B3C142C81E8A512800B7E3BE /* SNTopLayerWindowContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C142C71E8A512800B7E3BE /* SNTopLayerWindowContainer.m */; };
 		B3C142CB1E8A515B00B7E3BE /* SNTopLayerWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C142CA1E8A515B00B7E3BE /* SNTopLayerWindowViewController.m */; };
@@ -72,25 +65,11 @@
 		B32907551E88F91A0055B3AA /* TestPushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPushViewController.m; sourceTree = "<group>"; };
 		B32907571E88F9340055B3AA /* TestPresentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPresentViewController.h; sourceTree = "<group>"; };
 		B32907581E88F9340055B3AA /* TestPresentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPresentViewController.m; sourceTree = "<group>"; };
-		B329075B1E890C360055B3AA /* ZYLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYLoginManager.h; sourceTree = "<group>"; };
-		B329075C1E890C360055B3AA /* ZYLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYLoginManager.m; sourceTree = "<group>"; };
-		B329075D1E890C360055B3AA /* ZYLoginTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYLoginTableViewController.h; sourceTree = "<group>"; };
-		B329075E1E890C360055B3AA /* ZYLoginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYLoginTableViewController.m; sourceTree = "<group>"; };
-		B32907601E890C360055B3AA /* NSObject+ZYSuspensionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZYSuspensionView.h"; sourceTree = "<group>"; };
-		B32907611E890C360055B3AA /* NSObject+ZYSuspensionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZYSuspensionView.m"; sourceTree = "<group>"; };
-		B32907621E890C360055B3AA /* ZYSuspensionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYSuspensionManager.h; sourceTree = "<group>"; };
-		B32907631E890C360055B3AA /* ZYSuspensionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYSuspensionManager.m; sourceTree = "<group>"; };
-		B32907641E890C360055B3AA /* ZYSuspensionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYSuspensionView.h; sourceTree = "<group>"; };
-		B32907651E890C360055B3AA /* ZYSuspensionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYSuspensionView.m; sourceTree = "<group>"; };
-		B32907671E890C360055B3AA /* ZYTestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYTestManager.h; sourceTree = "<group>"; };
-		B32907681E890C360055B3AA /* ZYTestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYTestManager.m; sourceTree = "<group>"; };
-		B32907691E890C360055B3AA /* ZYTestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYTestTableViewController.h; sourceTree = "<group>"; };
-		B329076A1E890C360055B3AA /* ZYTestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYTestTableViewController.m; sourceTree = "<group>"; };
 		B32907721E890D2C0055B3AA /* JsutDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsutDoViewController.h; sourceTree = "<group>"; };
 		B32907731E890D2C0055B3AA /* JsutDoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsutDoViewController.m; sourceTree = "<group>"; };
 		B32907771E8910760055B3AA /* JsutDoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JsutDoViewController.xib; sourceTree = "<group>"; };
-		B39C44861E8E5FF500FCCBA4 /* TestSNTopLayerWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSNTopLayerWindowView.h; sourceTree = "<group>"; };
-		B39C44871E8E5FF500FCCBA4 /* TestSNTopLayerWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSNTopLayerWindowView.m; sourceTree = "<group>"; };
+		B38DB2541E8F5B9B008314A9 /* SNNavigationTopLayerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNNavigationTopLayerWindow.h; sourceTree = "<group>"; };
+		B38DB2551E8F5B9B008314A9 /* SNNavigationTopLayerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNNavigationTopLayerWindow.m; sourceTree = "<group>"; };
 		B3C142C31E8A482D00B7E3BE /* NSObject+SNTopLayerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SNTopLayerWindow.h"; sourceTree = "<group>"; };
 		B3C142C41E8A482D00B7E3BE /* NSObject+SNTopLayerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SNTopLayerWindow.m"; sourceTree = "<group>"; };
 		B3C142C61E8A512800B7E3BE /* SNTopLayerWindowContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNTopLayerWindowContainer.h; sourceTree = "<group>"; };
@@ -163,9 +142,6 @@
 				B32907731E890D2C0055B3AA /* JsutDoViewController.m */,
 				B32907771E8910760055B3AA /* JsutDoViewController.xib */,
 				B3C142C21E8A480E00B7E3BE /* SNTopLayerWindow */,
-				B329075A1E890C360055B3AA /* ZYLoginManager */,
-				B329075F1E890C360055B3AA /* ZYSuspensionView */,
-				B32907661E890C360055B3AA /* ZYTestManager */,
 				B32907271E88F6B60055B3AA /* Main.storyboard */,
 				B329072A1E88F6B60055B3AA /* Assets.xcassets */,
 				B329072C1E88F6B60055B3AA /* LaunchScreen.storyboard */,
@@ -201,41 +177,6 @@
 			path = SNWindowTestUITests;
 			sourceTree = "<group>";
 		};
-		B329075A1E890C360055B3AA /* ZYLoginManager */ = {
-			isa = PBXGroup;
-			children = (
-				B329075B1E890C360055B3AA /* ZYLoginManager.h */,
-				B329075C1E890C360055B3AA /* ZYLoginManager.m */,
-				B329075D1E890C360055B3AA /* ZYLoginTableViewController.h */,
-				B329075E1E890C360055B3AA /* ZYLoginTableViewController.m */,
-			);
-			path = ZYLoginManager;
-			sourceTree = "<group>";
-		};
-		B329075F1E890C360055B3AA /* ZYSuspensionView */ = {
-			isa = PBXGroup;
-			children = (
-				B32907601E890C360055B3AA /* NSObject+ZYSuspensionView.h */,
-				B32907611E890C360055B3AA /* NSObject+ZYSuspensionView.m */,
-				B32907621E890C360055B3AA /* ZYSuspensionManager.h */,
-				B32907631E890C360055B3AA /* ZYSuspensionManager.m */,
-				B32907641E890C360055B3AA /* ZYSuspensionView.h */,
-				B32907651E890C360055B3AA /* ZYSuspensionView.m */,
-			);
-			path = ZYSuspensionView;
-			sourceTree = "<group>";
-		};
-		B32907661E890C360055B3AA /* ZYTestManager */ = {
-			isa = PBXGroup;
-			children = (
-				B32907671E890C360055B3AA /* ZYTestManager.h */,
-				B32907681E890C360055B3AA /* ZYTestManager.m */,
-				B32907691E890C360055B3AA /* ZYTestTableViewController.h */,
-				B329076A1E890C360055B3AA /* ZYTestTableViewController.m */,
-			);
-			path = ZYTestManager;
-			sourceTree = "<group>";
-		};
 		B3C142C21E8A480E00B7E3BE /* SNTopLayerWindow */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,8 +190,8 @@
 				B3C142D31E8A536000B7E3BE /* SNTopLayerWindowView.m */,
 				B3C142CF1E8A525D00B7E3BE /* SNTopLayerWindowDraggableButton.h */,
 				B3C142D01E8A525D00B7E3BE /* SNTopLayerWindowDraggableButton.m */,
-				B39C44861E8E5FF500FCCBA4 /* TestSNTopLayerWindowView.h */,
-				B39C44871E8E5FF500FCCBA4 /* TestSNTopLayerWindowView.m */,
+				B38DB2541E8F5B9B008314A9 /* SNNavigationTopLayerWindow.h */,
+				B38DB2551E8F5B9B008314A9 /* SNNavigationTopLayerWindow.m */,
 			);
 			path = SNTopLayerWindow;
 			sourceTree = "<group>";
@@ -392,22 +333,15 @@
 			files = (
 				B32907261E88F6B60055B3AA /* ViewController.m in Sources */,
 				B3C142C51E8A482D00B7E3BE /* NSObject+SNTopLayerWindow.m in Sources */,
-				B329076C1E890C360055B3AA /* ZYLoginTableViewController.m in Sources */,
 				B32907231E88F6B60055B3AA /* AppDelegate.m in Sources */,
-				B32907701E890C360055B3AA /* ZYTestManager.m in Sources */,
-				B329076E1E890C360055B3AA /* ZYSuspensionManager.m in Sources */,
 				B3C142CB1E8A515B00B7E3BE /* SNTopLayerWindowViewController.m in Sources */,
 				B3C142D41E8A536000B7E3BE /* SNTopLayerWindowView.m in Sources */,
 				B3C142D11E8A525D00B7E3BE /* SNTopLayerWindowDraggableButton.m in Sources */,
-				B329076B1E890C360055B3AA /* ZYLoginManager.m in Sources */,
 				B32907741E890D2C0055B3AA /* JsutDoViewController.m in Sources */,
 				B32907591E88F9340055B3AA /* TestPresentViewController.m in Sources */,
+				B38DB2561E8F5B9B008314A9 /* SNNavigationTopLayerWindow.m in Sources */,
 				B32907561E88F91A0055B3AA /* TestPushViewController.m in Sources */,
-				B32907711E890C360055B3AA /* ZYTestTableViewController.m in Sources */,
-				B39C44881E8E5FF500FCCBA4 /* TestSNTopLayerWindowView.m in Sources */,
 				B3C142C81E8A512800B7E3BE /* SNTopLayerWindowContainer.m in Sources */,
-				B329076D1E890C360055B3AA /* NSObject+ZYSuspensionView.m in Sources */,
-				B329076F1E890C360055B3AA /* ZYSuspensionView.m in Sources */,
 				B32907201E88F6B60055B3AA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,6 +11,7 @@
 @interface SNTopLayerWindowView ()
 
 @property (nonatomic, assign) CGPoint initialCenter;
+@property (nonatomic, assign) CGPoint tempOrigin;
 
 @end
 
@@ -20,9 +21,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.tempOrigin = self.frame.origin;
         self.userInteractionEnabled = YES;
         self.clipsToBounds = YES;
-        self.backgroundColor = [UIColor yellowColor];
     }
     return self;
 }
@@ -128,9 +129,11 @@
 #pragma mark -- setter
 - (void)setIsDraggabled:(BOOL)isDraggabled
 {
+    _isDraggabled = isDraggabled;
     if (isDraggabled) {
         UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handlePanGesture:)];
         pan.delaysTouchesBegan = YES;
+        
         [self addGestureRecognizer:pan];
     }
 }
@@ -142,18 +145,47 @@
     if ([SNTopLayerWindowManager windowForKey:self.sn_md5Key]) {
         return;
     }
-    UIWindow * currentKeyWindow = [UIApplication sharedApplication].keyWindow;
     
-    SNTopLayerWindowContainer * topLayerWindow = [[SNTopLayerWindowContainer alloc] initWithFrame:self.frame];
-    topLayerWindow.rootViewController = [[SNTopLayerWindowViewController alloc] init];
+    CGFloat selfWidth = self.frame.size.width;
+    CGFloat selfHeight = self.frame.size.height;
+    
+    UIWindow * currentKeyWindow = [UIApplication sharedApplication].keyWindow;
+    SNTopLayerWindowContainer * topLayerWindow = [[SNTopLayerWindowContainer alloc] initWithFrame:CGRectMake(self.tempOrigin.x, self.tempOrigin.y, selfWidth, selfHeight)];
+    
+    SNTopLayerWindowViewController * topLayerWindowViewController = [[SNTopLayerWindowViewController alloc] init];
+    topLayerWindow.rootViewController = topLayerWindowViewController;
     [topLayerWindow makeKeyAndVisible];
     
     [SNTopLayerWindowManager setWindow:topLayerWindow forKey:self.sn_md5Key];
     
-    self.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-    [topLayerWindow addSubview:self];
+    self.frame = CGRectMake(0, 0, selfWidth, selfHeight);
+    [topLayerWindowViewController.view addSubview:self];
     
     [currentKeyWindow makeKeyWindow];
+    
+    if (self.isDraggabled) {
+        
+        CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+        CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+
+        switch (self.leanStyle) {
+            case SNTopLayerWindowViewLeanStyleNormal:{
+            } break;
+            case SNTopLayerWindowViewLeanStyleHorizontal: {
+                topLayerWindow.center =
+                CGPointMake(self.tempOrigin.x + selfWidth/2 > screenWidth/2 ? screenWidth - self.HorizontalMargin - selfWidth/2 : self.HorizontalMargin + selfWidth/2,
+                            self.tempOrigin.y < 0 ? selfHeight/2 : self.tempOrigin.y > screenHeight ? screenHeight - selfHeight/2 : self.tempOrigin.y + selfHeight/2);
+            }
+                break;
+            case SNTopLayerWindowViewLeanStyleEachSide: {
+                topLayerWindow.center =
+                CGPointMake(self.tempOrigin.x + selfWidth/2 > screenWidth/2 ? screenWidth - self.HorizontalMargin - selfWidth/2 : self.HorizontalMargin + selfWidth/2,
+                            self.tempOrigin.y < self.verticalMargin ? self.verticalMargin + selfHeight/2 : self.tempOrigin.y > screenHeight - self.verticalMargin ? screenHeight - selfHeight/2 - self.verticalMargin : self.tempOrigin.y + selfHeight/2);
+            } break;
+            default:{
+            } break;
+        }
+    }
 }
 
 - (void)dismiss

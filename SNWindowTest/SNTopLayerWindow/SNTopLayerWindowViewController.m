@@ -14,6 +14,10 @@
 
 @implementation SNTopLayerWindowViewController
 
+- (void)dealloc {
+    NSLog(@"%s",__func__);
+}
+
 //隐藏状态栏
 - (BOOL)prefersStatusBarHidden {
     return NO;

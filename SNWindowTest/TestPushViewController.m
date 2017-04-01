@@ -23,6 +23,12 @@
     // Do any additional setup after loading the view.
 }
 
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [[UIApplication sharedApplication].windows enumerateObjectsUsingBlock:^(__kindof UIWindow * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSLog(@"obj - - %@, windowLevel -- %f",NSStringFromClass([obj class]),obj.windowLevel);
+    }];
+    
+}
 
 @end
